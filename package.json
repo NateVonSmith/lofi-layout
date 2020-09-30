@@ -1,6 +1,6 @@
 {
     "name": "lofi-layout",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Declarative flex/grid layout api using (s)css utility classes",
     "prettier": "lofi-prettier-config",
     "main": "index.js",
