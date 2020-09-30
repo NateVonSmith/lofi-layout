@@ -10,7 +10,7 @@
     ],
     "scripts": {
         "compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/_lofi-layout.scss src/lofi-layout.css",
-        "publish": "npm version patch && npm publish"
+        "publish": "npm run compile && npm version patch && npm publish"
     },
     "repository": {
         "type": "git",
