@@ -1,0 +1,29 @@
+{
+    "name": "lofi-layout",
+    "version": "1.0.0",
+    "description": "Declarative flex/grid layout api using (s)css utility classes",
+    "prettier": "lofi-prettier-config",
+    "main": "index.js",
+    "files": [
+        "src/*.scss",
+        "src/*.css"
+    ],
+    "scripts": {
+        "compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/_lofi-layout.scss src/lofi-layout.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NateVonSmith/lofi-layout.git"
+    },
+    "author": "NateVonSmith",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NateVonSmith/lofi-layout/issues"
+    },
+    "homepage": "https://github.com/NateVonSmith/lofi-layout#readme",
+    "devDependencies": {
+        "clean-css-cli": "^4.3.0",
+        "lofi-prettier-config": "^1.0.1",
+        "node-sass": "^4.14.1"
+    }
+}
