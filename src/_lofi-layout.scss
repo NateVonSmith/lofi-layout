@@ -4,6 +4,11 @@ $widthMobile: 600px;
 $widthLaptop: 970px;
 $widthLarge: 1200px;
 
+$gap-sizes: 5 10 15 20 30;
+$flex-percents: 3 10 20 21 24 25 30 33 34 40 49 50 60 64 65 66 75 80 100;
+$grid-column-count: 1 2 3 4 6;
+$grid-cell-sizes: 80 100 120 140;
+
 @mixin full-width {
     width: 100%;
     margin-left: 0;
@@ -11,49 +16,21 @@ $widthLarge: 1200px;
 }
 
 @mixin row-gap-values {
-    &-gap {
-        &-5 > * {
-            margin: 0 2.5px;
-        }
-
-        &-10 > * {
-            margin: 0 5px;
-        }
-
-        &-15 > * {
-            margin: 0 7.5px;
-        }
-
-        &-20 > * {
-            margin: 0 10px;
-        }
-
-        &-30 > * {
-            margin: 0 15px;
+    @each $size in $gap-sizes {
+        &-gap {
+            &-#{$size} > * {
+                margin: 0 ($size / 2 * 1px);
+            }
         }
     }
 }
 
 @mixin column-gap-values {
-    &-gap {
-        &-5 > * {
-            margin: 2.5px 0;
-        }
-
-        &-10 > * {
-            margin: 5px 0;
-        }
-
-        &-15 > * {
-            margin: 7.5px 0;
-        }
-
-        &-20 > * {
-            margin: 10px 0;
-        }
-
-        &-30 > * {
-            margin: 15px 0;
+    @each $size in $gap-sizes {
+        &-gap {
+            &-#{$size} > * {
+                margin: ($size / 2 * 1px) 0;
+            }
         }
     }
 }
@@ -132,84 +109,10 @@ $widthLarge: 1200px;
 
             > * {
                 &.#{$prefix}-flex {
-                    &-3-percent {
-                        width: 3%;
-                    }
-
-                    &-10-percent {
-                        width: 10%;
-                    }
-
-                    &-20-percent {
-                        width: 20%;
-                    }
-
-                    &-21-percent {
-                        width: 21%;
-                    }
-
-                    &-24-percent {
-                        width: 24%;
-                    }
-
-                    &-25-percent {
-                        width: 25%;
-                    }
-
-                    &-30-percent {
-                        width: 30%;
-                    }
-
-                    &-33-percent {
-                        width: 33%;
-                    }
-
-                    &-34-percent {
-                        width: 34%;
-                    }
-
-                    &-40-percent {
-                        width: 40%;
-                    }
-
-                    &-49-percent {
-                        width: 49%;
-                    }
-
-                    &-50-percent {
-                        width: 50%;
-                    }
-
-                    &-60-percent {
-                        width: 60%;
-                    }
-
-                    &-64-percent {
-                        width: 64%;
-                    }
-
-                    &-65-percent {
-                        width: 65%;
-                    }
-
-                    &-66-percent {
-                        width: 66%;
-                    }
-
-                    &-75-percent {
-                        width: 75%;
-                    }
-
-                    &-80-percent {
-                        width: 80%;
-                    }
-
-                    &-100-percent {
-                        width: 100%;
-                    }
-
-                    &-125-px {
-                        width: 125px;
+                    @each $percent in $flex-percents {
+                        &-#{$percent}-percent {
+                            width: $percent + '%';
+                        }
                     }
                 }
             }
@@ -222,76 +125,10 @@ $widthLarge: 1200px;
 
             > * {
                 &.#{$prefix}-flex {
-                    &-3-percent {
-                        height: 3%;
-                    }
-
-                    &-10-percent {
-                        height: 10%;
-                    }
-
-                    &-20-percent {
-                        height: 20%;
-                    }
-
-                    &-21-percent {
-                        height: 21%;
-                    }
-
-                    &-24-percent {
-                        height: 24%;
-                    }
-
-                    &-25-percent {
-                        height: 25%;
-                    }
-
-                    &-30-percent {
-                        height: 30%;
-                    }
-
-                    &-33-percent {
-                        height: 33%;
-                    }
-
-                    &-34-percent {
-                        height: 34%;
-                    }
-
-                    &-50-percent {
-                        height: 50%;
-                    }
-
-                    &-60-percent {
-                        height: 60%;
-                    }
-
-                    &-64-percent {
-                        height: 64%;
-                    }
-
-                    &-65-percent {
-                        height: 65%;
-                    }
-
-                    &-66-percent {
-                        height: 66%;
-                    }
-
-                    &-75-percent {
-                        height: 75%;
-                    }
-
-                    &-80-percent {
-                        height: 80%;
-                    }
-
-                    &-100-percent {
-                        height: 100%;
-                    }
-
-                    &-125-px {
-                        height: 125px;
+                    @each $percent in $flex-percents {
+                        &-#{$percent}-percent {
+                            height: $percent + '%';
+                        }
                     }
                 }
             }
@@ -404,24 +241,11 @@ $widthLarge: 1200px;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
 
-    &.#{$prefix}-cell-80 {
-        grid-auto-rows: 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
-    }
-
-    &.#{$prefix}-cell-100 {
-        grid-auto-rows: 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-
-    &.#{$prefix}-cell-120 {
-        grid-auto-rows: 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    &.#{$prefix}-cell-140 {
-        grid-auto-rows: 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    @each $size in $grid-cell-sizes {
+        &.#{$prefix}-cell-#{$size} {
+            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(auto-fill, minmax($size + 'px', 1fr));
+        }
     }
 
     &[class*='#{$prefix}-cell-'] {
@@ -439,75 +263,31 @@ $widthLarge: 1200px;
         }
     }
 
-    &.#{$prefix}-grid-columns-2 {
-        grid-template-columns: repeat(2, 1fr);
+    @each $colCount in $grid-column-count {
+        &.#{$prefix}-grid-columns-#{$colCount} {
+            grid-template-columns: repeat($colCount, 1fr);
+        }
     }
 
-    &.#{$prefix}-grid-columns-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    &.#{$prefix}-grid-columns-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    &.#{$prefix}-grid-columns-6 {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    &.#{$prefix}-gap-0 {
-        grid-gap: 0;
-    }
-
-    &.#{$prefix}-gap-1 {
-        grid-gap: 1px;
-    }
-
-    &.#{$prefix}-gap-5 {
-        grid-gap: 5px;
-    }
-
-    &.#{$prefix}-gap-10 {
-        grid-gap: 10px;
-    }
-
-    &.#{$prefix}-gap-20 {
-        grid-gap: 20px;
+    @each $size in $gap-sizes {
+        &.#{$prefix}-gap-#{$size} {
+            grid-gap: $size + 'px';
+        }
     }
 
     @media (max-width: $widthLaptop) {
-        .#{$prefix}-lt-md-grid-columns-1 {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .#{$prefix}-lt-md-grid-columns-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .#{$prefix}-lt-md-grid-columns-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .#{$prefix}-lt-md-grid-columns-4 {
-            grid-template-columns: repeat(4, 1fr);
+        @each $colCount in $grid-column-count {
+            &.#{$prefix}-lt-md-grid-columns-#{$colCount} {
+                grid-template-columns: repeat($colCount, 1fr);
+            }
         }
     }
 
     @media (max-width: $widthMobile) {
-        .#{$prefix}-lt-sm-grid-columns-1 {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .#{$prefix}-lt-sm-grid-columns-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .#{$prefix}-lt-sm-grid-columns-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .#{$prefix}-lt-sm-grid-columns-4 {
-            grid-template-columns: repeat(4, 1fr);
+        @each $colCount in $grid-column-count {
+            &.#{$prefix}-lt-sm-grid-columns-#{$colCount} {
+                grid-template-columns: repeat($colCount, 1fr);
+            }
         }
     }
 }
