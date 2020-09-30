@@ -1,6 +1,6 @@
 {
     "name": "lofi-layout",
-    "version": "1.0.3",
+    "version": "1.0.2",
     "description": "Declarative flex/grid layout api using (s)css utility classes",
     "prettier": "lofi-prettier-config",
     "main": "index.js",
@@ -10,7 +10,7 @@
     ],
     "scripts": {
         "compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/_lofi-layout.scss src/lofi-layout.css",
-        "publish": "npm run compile && npm version patch && npm publish"
+        "npm-publish": "npm run compile && npm version patch && npm publish"
     },
     "repository": {
         "type": "git",
