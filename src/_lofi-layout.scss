@@ -4,7 +4,7 @@ $widthMobile: 600px;
 $widthLaptop: 970px;
 $widthLarge: 1200px;
 
-$gap-sizes: 5 10 15 20 30;
+$gap-sizes: 0 5 10 15 20 30;
 $flex-percents: 3 10 20 21 24 25 30 33 34 40 49 50 60 64 65 66 75 80 100;
 $grid-column-count: 1 2 3 4 6;
 $grid-cell-sizes: 80 100 120 140;
@@ -161,6 +161,11 @@ $grid-cell-sizes: 80 100 120 140;
             align-items: flex-start;
         }
 
+        &-center-end {
+            place-content: flex-end center;
+            align-items: flex-end;
+        }
+
         &-stretch-center {
             align-items: center;
 
@@ -239,7 +244,6 @@ $grid-cell-sizes: 80 100 120 140;
     display: grid;
     grid-auto-rows: minmax(auto, auto);
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
 
     @each $size in $grid-cell-sizes {
         &.#{$prefix}-cell-#{$size} {
