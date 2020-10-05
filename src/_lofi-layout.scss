@@ -216,6 +216,18 @@ $grid-cell-sizes: 80 100 120 140;
                     }
                 }
 
+                &-row {
+                    &.#{$prefix}-lt-sm {
+                        @include row-gap-values();
+                    }
+                }
+
+                &-column {
+                    &.#{$prefix}-lt-sm {
+                        @include column-gap-values();
+                    }
+                }
+
                 @include resize-layout();
             }
         }
