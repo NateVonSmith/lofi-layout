@@ -209,6 +209,8 @@ $grid-cell-sizes: 80 100 120 140;
 
         @media (max-width: $widthMobile) {
             &-lt-sm {
+                @include resize-layout();
+
                 .#{$prefix}-column,
                 .#{$prefix}-row {
                     &[class*='#{$prefix}-gap-'] > * {
@@ -227,8 +229,6 @@ $grid-cell-sizes: 80 100 120 140;
                         @include column-gap-values();
                     }
                 }
-
-                @include resize-layout();
             }
         }
 

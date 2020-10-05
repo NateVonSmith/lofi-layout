@@ -303,46 +303,6 @@
 }
 
 @media (max-width: 600px) {
-  .lofi-layout.lofi-lt-sm .lofi-column[class*='lofi-gap-'] > *,
-  .lofi-layout.lofi-lt-sm .lofi-row[class*='lofi-gap-'] > * {
-    margin: 0;
-  }
-  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-0 > * {
-    margin: 0 0px;
-  }
-  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-5 > * {
-    margin: 0 2.5px;
-  }
-  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-10 > * {
-    margin: 0 5px;
-  }
-  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-15 > * {
-    margin: 0 7.5px;
-  }
-  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-20 > * {
-    margin: 0 10px;
-  }
-  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-30 > * {
-    margin: 0 15px;
-  }
-  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-0 > * {
-    margin: 0px 0;
-  }
-  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-5 > * {
-    margin: 2.5px 0;
-  }
-  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-10 > * {
-    margin: 5px 0;
-  }
-  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-15 > * {
-    margin: 7.5px 0;
-  }
-  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-20 > * {
-    margin: 10px 0;
-  }
-  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-30 > * {
-    margin: 15px 0;
-  }
   .lofi-layout.lofi-lt-sm-row {
     flex-direction: row;
   }
@@ -437,6 +397,46 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+  .lofi-layout.lofi-lt-sm .lofi-column[class*='lofi-gap-'] > *,
+  .lofi-layout.lofi-lt-sm .lofi-row[class*='lofi-gap-'] > * {
+    margin: 0;
+  }
+  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-0 > * {
+    margin: 0 0px;
+  }
+  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-5 > * {
+    margin: 0 2.5px;
+  }
+  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-10 > * {
+    margin: 0 5px;
+  }
+  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-15 > * {
+    margin: 0 7.5px;
+  }
+  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-20 > * {
+    margin: 0 10px;
+  }
+  .lofi-layout.lofi-lt-sm-row.lofi-lt-sm-gap-30 > * {
+    margin: 0 15px;
+  }
+  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-0 > * {
+    margin: 0px 0;
+  }
+  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-5 > * {
+    margin: 2.5px 0;
+  }
+  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-10 > * {
+    margin: 5px 0;
+  }
+  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-15 > * {
+    margin: 7.5px 0;
+  }
+  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-20 > * {
+    margin: 10px 0;
+  }
+  .lofi-layout.lofi-lt-sm-column.lofi-lt-sm-gap-30 > * {
+    margin: 15px 0;
   }
 }
 
